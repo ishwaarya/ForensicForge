@@ -1,0 +1,226 @@
+.checkout-container {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.checkout-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.checkout-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: transparent;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--text-main));
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: -1px;
+}
+
+.checkout-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.form-card, .summary-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 40px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-card::before, .summary-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));
+}
+
+.form-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: var(--text-main);
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 14px 16px;
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
+    background: rgba(0, 245, 255, 0.05);
+}
+
+.half-group-container {
+    display: flex;
+    gap: 20px;
+}
+
+.half-group {
+    flex: 1;
+}
+
+.card-input-wrapper {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-input-wrapper:focus-within {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
+    background: rgba(0, 245, 255, 0.05);
+}
+
+.card-input-wrapper input {
+    border: none;
+    background: transparent;
+    border-radius: 0;
+}
+
+.card-input-wrapper input:focus {
+    box-shadow: none;
+    background: transparent;
+}
+
+.card-details {
+    display: flex;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-details input:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Order Summary */
+.order-items {
+    margin-bottom: 30px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.item-icon {
+    font-size: 2rem;
+    background: rgba(0, 245, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    color: var(--accent-cyan);
+}
+
+.item-details h4 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    color: var(--text-main);
+}
+
+.item-details p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.item-price {
+    margin-left: auto;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.summary-totals {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.final-total {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 1.25rem;
+    color: var(--text-main);
+    align-items: center;
+}
+
+.highlight-price {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: transparent;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.secure-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: var(--accent-cyan);
+    opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .checkout-summary-section {
+        order: -1; /* Show summary first on mobile */
+    }
+}
