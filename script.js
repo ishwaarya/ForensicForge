@@ -111,3 +111,68 @@ function animate() {
 }
 
 animate();
+
+// Modal Selection and Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const modalOverlay = document.getElementById('modalOverlay');
+    const googleAuthModal = document.getElementById('googleAuthModal');
+    const caseStudyModal = document.getElementById('caseStudyModal');
+    const closeBtns = document.querySelectorAll('.close-modal');
+
+    // Sign in Button
+    const loginBtn = document.querySelector('.google-login');
+    if(loginBtn) {
+        loginBtn.addEventListener('click', () => {
+            modalOverlay.classList.add('active');
+            googleAuthModal.classList.add('active');
+        });
+    }
+
+    // Case Studies
+    const caseCards = document.querySelectorAll('.case-card');
+    const modalCaseBadge = document.getElementById('modalCaseBadge');
+    const modalCaseTitle = document.getElementById('modalCaseTitle');
+    const modalCaseDesc = document.getElementById('modalCaseDesc');
+
+    caseCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Prevent anchor tags from redirecting if clicked
+            if(e.target.closest('a')) e.preventDefault();
+            
+            const badge = card.querySelector('.case-badge');
+            const title = card.querySelector('h4').innerText;
+            const desc = card.querySelector('p').innerText;
+
+            if(badge) {
+                modalCaseBadge.className = badge.className;
+                modalCaseBadge.innerText = badge.innerText;
+            }
+            modalCaseTitle.innerText = title;
+            modalCaseDesc.innerText = desc;
+
+            modalOverlay.classList.add('active');
+            caseStudyModal.classList.add('active');
+        });
+    });
+
+    // Close Modals
+    const closeAll = () => {
+        modalOverlay.classList.remove('active');
+        if(googleAuthModal) googleAuthModal.classList.remove('active');
+        if(caseStudyModal) caseStudyModal.classList.remove('active');
+    };
+
+    closeBtns.forEach(btn => btn.addEventListener('click', closeAll));
+    if(modalOverlay) modalOverlay.addEventListener('click', closeAll);
+
+    // Chat Bot Toggle Minimized State
+    const chatBotContainer = document.getElementById('chatBotContainer');
+    const chatBotToggle = document.getElementById('chatBotToggle');
+    
+    if(chatBotToggle && chatBotContainer) {
+        chatBotToggle.addEventListener('click', () => {
+            chatBotContainer.classList.toggle('minimized');
+        });
+    }
+});
+
