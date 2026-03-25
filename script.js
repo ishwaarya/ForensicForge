@@ -174,5 +174,60 @@ document.addEventListener('DOMContentLoaded', () => {
             chatBotContainer.classList.toggle('minimized');
         });
     }
-});
 
+    // Sidebar Minimize Toggle
+    const mainSidebar = document.getElementById('mainSidebar');
+    const sidebarToggleBtn = document.getElementById('sidebarToggle');
+    if(mainSidebar && sidebarToggleBtn) {
+        sidebarToggleBtn.addEventListener('click', () => {
+            mainSidebar.classList.toggle('minimized');
+        });
+    }
+
+    // Chat Bot Functional Logic
+    const chatInput = document.getElementById('chatInput');
+    const sendChatBtn = document.getElementById('sendChatBtn');
+    const chatMessages = document.getElementById('chatMessages');
+
+    function appendMessage(text, sender) {
+        if (!text.trim()) return;
+        
+        const msgDiv = document.createElement('div');
+        msgDiv.className = `chat-message ${sender}`;
+        
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'message-content';
+        contentDiv.textContent = text;
+        
+        msgDiv.appendChild(contentDiv);
+        chatMessages.appendChild(msgDiv);
+        
+        // Auto scroll to bottom
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function handleSend() {
+        if (!chatInput) return;
+        const text = chatInput.value;
+        if (text.trim() === '') return;
+        
+        // Add user message
+        appendMessage(text, 'user');
+        chatInput.value = '';
+        
+        // Simulate bot reply
+        setTimeout(() => {
+            appendMessage("I am a forensic lab assistant. How can I help you today?", 'bot');
+        }, 800);
+    }
+
+    if (sendChatBtn && chatInput) {
+        sendChatBtn.addEventListener('click', handleSend);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                handleSend();
+            }
+        });
+    }
+});
