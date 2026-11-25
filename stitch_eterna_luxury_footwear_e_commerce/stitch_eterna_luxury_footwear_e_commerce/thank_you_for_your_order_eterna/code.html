@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ETERNA - Order Confirmation</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Bodoni Moda & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#444748",
+              "surface-container": "#efeeec",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "surface-bright": "#faf9f7",
+              "outline": "#747878",
+              "on-error-container": "#93000a",
+              "background": "#faf9f7",
+              "on-primary-fixed": "#1c1b1b",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#25190f",
+              "tertiary-container": "#25190f",
+              "surface-container-highest": "#e3e2e0",
+              "on-background": "#1a1c1b",
+              "tertiary-fixed-dim": "#d8c3b3",
+              "on-secondary-fixed-variant": "#574500",
+              "inverse-on-surface": "#f1f1ef",
+              "on-primary-fixed-variant": "#474746",
+              "on-tertiary-fixed-variant": "#534438",
+              "primary-fixed-dim": "#c8c6c5",
+              "on-secondary-fixed": "#241a00",
+              "secondary-fixed-dim": "#e9c349",
+              "tertiary": "#000000",
+              "on-secondary-container": "#745c00",
+              "secondary": "#735c00",
+              "outline-variant": "#c4c7c7",
+              "surface-container-high": "#e9e8e6",
+              "primary-fixed": "#e5e2e1",
+              "surface-variant": "#e3e2e0",
+              "surface": "#faf9f7",
+              "secondary-fixed": "#ffe088",
+              "on-surface": "#1a1c1b",
+              "on-tertiary-container": "#938072",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-primary-container": "#858383",
+              "surface-container-low": "#f4f3f1",
+              "primary": "#000000",
+              "inverse-primary": "#c8c6c5",
+              "tertiary-fixed": "#f5dece",
+              "primary-container": "#1c1b1b",
+              "surface-dim": "#dadad8",
+              "on-tertiary": "#ffffff",
+              "inverse-surface": "#2f3130",
+              "secondary-container": "#fed65b",
+              "surface-tint": "#5f5e5e"
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+            spacing: {
+              "gutter": "24px",
+              "container-max": "1440px",
+              "margin-desktop": "80px",
+              "margin-mobile": "20px",
+              "unit": "8px",
+              "section-gap": "120px"
+            },
+            fontFamily: {
+              "display-lg": ["Bodoni Moda"],
+              "body-lg": ["Inter"],
+              "headline-md": ["Bodoni Moda"],
+              "label-caps": ["Inter"],
+              "display-lg-mobile": ["Bodoni Moda"],
+              "body-md": ["Inter"],
+              "headline-sm": ["Bodoni Moda"]
+            },
+            fontSize: {
+              "display-lg": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "400" }],
+              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "300" }],
+              "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "400" }],
+              "label-caps": ["12px", { lineHeight: "1.0", letterSpacing: "0.15em", fontWeight: "600" }],
+              "display-lg-mobile": ["40px", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "400" }],
+              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+              "headline-sm": ["24px", { lineHeight: "1.4", fontWeight: "500" }]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md selection:bg-surface-dim selection:text-on-background">
+<!-- TopNavBar (Suppressed for transactional screen, but replacing with simplified logo header as per standard UX practice for checkouts/confirmations) -->
+<header class="w-full py-8 px-margin-mobile md:px-margin-desktop flex justify-center items-center border-b border-outline-variant/30">
+<div class="h-12 flex items-center justify-center">
+<!-- Utilizing the provided logo image placeholder -->
+<img alt="ETERNA Logo" class="h-full object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzIBiMh7_3nmTUltJIUwhKdcnd5ufuOn3Oafrm9YnbUZNBvQ-3dAPuQzAE3aLMRW3Pb4tAmFVYouPloB7dCeZtVrPKZe3uf_hS0IlJLUG2lPQk6gcpDhOeUSaEPZZs2w-mLMdBKymPwVCCla8VY7VNKjqK24cpszlou2-tufoFO5Kstf7n2U6jnsdPDL6mz90r8HZwSqQ3BfjF6I9naelEhMuiaY72mD8hJzAqVORP8xgaa84_gE0"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-3xl w-full flex flex-col items-center text-center">
+<!-- Icon/Visual Anchor -->
+<div class="w-24 h-24 mb-12 flex items-center justify-center rounded-full border border-outline-variant/30 bg-surface-container-low text-primary animate-[pulse_3s_ease-in-out_infinite]">
+<span class="material-symbols-outlined text-4xl" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<!-- Headlines -->
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">
+                Thank you for choosing ETERNA.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-16">
+                Your order has been successfully placed and is being prepared with care. A confirmation email has been sent to your inbox.
+            </p>
+<!-- Order Details Box (Bento/Glassmorphism inspired subtle container) -->
+<div class="w-full max-w-xl bg-surface-container-low border border-outline-variant/30 p-8 md:p-12 text-left mb-16 relative overflow-hidden group">
+<!-- Subtle background decorative element -->
+<div class="absolute -right-16 -top-16 w-48 h-48 bg-surface-container-high rounded-full blur-3xl opacity-50 transition-transform duration-1000 group-hover:scale-110"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-end border-b border-outline-variant/30 pb-6 mb-8">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">Order Number</span>
+<span class="font-headline-sm text-headline-sm text-primary">#ETN-8934-C92</span>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">Date</span>
+<span class="font-body-md text-body-md text-primary">Oct 26, 2023</span>
+</div>
+</div>
+<!-- Line Items Summary -->
+<div class="space-y-6 mb-8">
+<div class="flex items-center gap-4">
+<div class="w-16 h-20 bg-surface-container-high border border-outline-variant/30 flex-shrink-0" data-alt="A meticulously lit close-up of a luxurious silk scarf draped elegantly, showcasing deep black and warm white geometric patterns. High fashion editorial style, minimalistic studio lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYXGWXqMnXtpbHk_eiV0i_zG2vlegua6SkfZpzn4npZef7f2Fc_tTkf5LiDWY5zIUsRgY86bf2JVi4L293TugDEJ3ixrdKVus4sAg0ttV1CG8FmMR_G-M2Bh12_Kqsedow34ZY5sJFoNGt8R1WsZT1irqhpjzXThLvPXxstrPNTxnhseKe7uueW5qx1gNYrY33XApQagKHpyi8RMNk0q-VEUGy4dR-t7iRRI-N4XcREFdhHyKZB6w')"></div>
+<div class="flex-grow">
+<h3 class="font-body-md text-body-md text-primary">The Timeless Silk Scarf</h3>
+<p class="font-body-sm text-sm text-on-surface-variant">Qty: 1</p>
+</div>
+<div class="font-body-md text-body-md text-primary">$185.00</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-20 bg-surface-container-high border border-outline-variant/30 flex-shrink-0" data-alt="A minimalist flat lay of a sleek, black leather structured handbag against a pristine ivory background. Soft shadows, premium editorial product photography aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEX4J6HKjpFKp2xh5QkwViwxzos5XbONeoeTlMVyuDeUfJ4egVtmtN9RElCleLfmSzObsVUms3s26yEuXAF9usDomkEmb5557OGm49P4CusLhnKNIo8ArrPG9uDBs1b6NkPCaLonr4cvlPRQhYtVEY4Cew7vHOtFncxDpCuGUz4zB4jjHRR2uEZ7JavK5e-dansgobKoLjN6r0POwg129lE08AzDAofMwAIjeVo0CZYw-Jc0CVkwo')"></div>
+<div class="flex-grow">
+<h3 class="font-body-md text-body-md text-primary">Structured Leather Mini</h3>
+<p class="font-body-sm text-sm text-on-surface-variant">Qty: 1</p>
+</div>
+<div class="font-body-md text-body-md text-primary">$450.00</div>
+</div>
+</div>
+<!-- Totals & Delivery -->
+<div class="border-t border-outline-variant/30 pt-6">
+<div class="flex justify-between items-center mb-6">
+<span class="font-headline-sm text-headline-sm text-primary">Total</span>
+<span class="font-headline-sm text-headline-sm text-primary">$635.00</span>
+</div>
+<div class="bg-surface-bright border border-outline-variant/30 p-4 flex items-start gap-4">
+<span class="material-symbols-outlined text-on-surface-variant mt-1" data-icon="local_shipping">local_shipping</span>
+<div>
+<span class="font-label-caps text-label-caps text-primary block mb-1">Estimated Delivery</span>
+<span class="font-body-md text-body-md text-on-surface-variant">3-5 Business Days (Standard Shipping)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA -->
+<a class="inline-block bg-primary text-on-primary font-label-caps text-label-caps py-4 px-10 hover:bg-surface-tint transition-colors duration-300" href="#">
+                Continue Shopping
+            </a>
+</div>
+</main>
+<!-- Footer (Included as per JSON blueprint, though often simplified on checkout, keeping it for brand anchor completion) -->
+<footer class="w-full pt-section-gap pb-12 bg-surface-container-low text-primary border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1 flex flex-col items-start mb-8 md:mb-0">
+<span class="font-headline-md text-headline-md text-primary mb-4 tracking-widest">ETERNA</span>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 ETERNA. Timeless by Design.</p>
+</div>
+<!-- Links Columns - Implementing JSON navigation links -->
+<div class="col-span-1 flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all ease-in-out duration-200" href="#">Shop</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all ease-in-out duration-200" href="#">Customer Care</a>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all ease-in-out duration-200" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all ease-in-out duration-200" href="#">Socials</a>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all ease-in-out duration-200" href="#">Store Locator</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ETERNA - Customer Account</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#444748",
+                        "surface-container": "#efeeec",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#faf9f7",
+                        "outline": "#747878",
+                        "on-error-container": "#93000a",
+                        "background": "#faf9f7",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#25190f",
+                        "tertiary-container": "#25190f",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-background": "#1a1c1b",
+                        "tertiary-fixed-dim": "#d8c3b3",
+                        "on-secondary-fixed-variant": "#574500",
+                        "inverse-on-surface": "#f1f1ef",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-tertiary-fixed-variant": "#534438",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-secondary-fixed": "#241a00",
+                        "secondary-fixed-dim": "#e9c349",
+                        "tertiary": "#000000",
+                        "on-secondary-container": "#745c00",
+                        "secondary": "#735c00",
+                        "outline-variant": "#c4c7c7",
+                        "surface-container-high": "#e9e8e6",
+                        "primary-fixed": "#e5e2e1",
+                        "surface-variant": "#e3e2e0",
+                        "surface": "#faf9f7",
+                        "secondary-fixed": "#ffe088",
+                        "on-surface": "#1a1c1b",
+                        "on-tertiary-container": "#938072",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#858383",
+                        "surface-container-low": "#f4f3f1",
+                        "primary": "#000000",
+                        "inverse-primary": "#c8c6c5",
+                        "tertiary-fixed": "#f5dece",
+                        "primary-container": "#1c1b1b",
+                        "surface-dim": "#dadad8",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2f3130",
+                        "secondary-container": "#fed65b",
+                        "surface-tint": "#5f5e5e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Bodoni Moda", "serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-md": ["Bodoni Moda", "serif"],
+                        "label-caps": ["Inter", "sans-serif"],
+                        "display-lg-mobile": ["Bodoni Moda", "serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-sm": ["Bodoni Moda", "serif"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "300" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-transparent sticky top-0 z-50 backdrop-blur-md dark:bg-transparent w-full top-0 border-b border-outline-variant/30 transition-all duration-500 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 w-full max-w-container-max mx-auto">
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Shop</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Collections</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">New Arrivals</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Best Sellers</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Store Locator</a>
+</nav>
+<div class="flex-1 md:flex-none flex justify-center">
+<img alt="ETERNA Logo" class="h-8 md:h-12 object-contain hover:opacity-70 transition-opacity duration-300 cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzIBiMh7_3nmTUltJIUwhKdcnd5ufuOn3Oafrm9YnbUZNBvQ-3dAPuQzAE3aLMRW3Pb4tAmFVYouPloB7dCeZtVrPKZe3uf_hS0IlJLUG2lPQk6gcpDhOeUSaEPZZs2w-mLMdBKymPwVCCla8VY7VNKjqK24cpszlou2-tufoFO5Kstf7n2U6jnsdPDL6mz90r8HZwSqQ3BfjF6I9naelEhMuiaY72mD8hJzAqVORP8xgaa84_gE0"/>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-primary hover:opacity-70 transition-opacity duration-300"><span class="material-symbols-outlined">search</span></button>
+<button class="text-primary hover:opacity-70 transition-opacity duration-300 border-b border-primary pb-1"><span class="material-symbols-outlined fill">person</span></button>
+<button class="text-primary hover:opacity-70 transition-opacity duration-300"><span class="material-symbols-outlined">favorite</span></button>
+<button class="text-primary hover:opacity-70 transition-opacity duration-300"><span class="material-symbols-outlined">shopping_bag</span></button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Navigation -->
+<aside class="w-full md:w-64 shrink-0">
+<h1 class="font-headline-md text-headline-md text-primary mb-12">My Account</h1>
+<nav class="flex flex-col space-y-2">
+<a class="flex items-center space-x-4 py-3 px-4 bg-surface-container-low text-primary font-medium rounded-DEFAULT" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-body-md text-body-md">Profile</span>
+</a>
+<a class="flex items-center space-x-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors duration-200 rounded-DEFAULT" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-body-md text-body-md">Orders</span>
+</a>
+<a class="flex items-center space-x-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors duration-200 rounded-DEFAULT" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="font-body-md text-body-md">Wishlist</span>
+</a>
+<a class="flex items-center space-x-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors duration-200 rounded-DEFAULT" href="#">
+<span class="material-symbols-outlined">location_on</span>
+<span class="font-body-md text-body-md">Saved Addresses</span>
+</a>
+<a class="flex items-center space-x-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors duration-200 rounded-DEFAULT" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-body-md text-body-md">Recently Viewed</span>
+</a>
+<a class="flex items-center space-x-4 py-3 px-4 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors duration-200 rounded-DEFAULT" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</a>
+<div class="h-px bg-outline-variant/30 my-4"></div>
+<a class="flex items-center space-x-4 py-3 px-4 text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-body-md text-body-md">Logout</span>
+</a>
+</nav>
+</aside>
+<!-- Dashboard Area -->
+<section class="flex-grow pt-12 md:pt-0">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-8 border-b border-outline-variant/30 pb-4">Profile Overview</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+<!-- Personal Info Card -->
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col justify-between">
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-6 tracking-widest">Personal Details</h3>
+<p class="font-body-lg text-body-lg text-primary mb-2">Eleanor Vance</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-1">eleanor.vance@example.com</p>
+<p class="font-body-md text-body-md text-on-surface-variant">+1 (555) 123-4567</p>
+</div>
+<div class="mt-8">
+<button class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:text-on-surface-variant hover:border-on-surface-variant transition-colors">EDIT DETAILS</button>
+</div>
+</div>
+<!-- Default Address Card -->
+<div class="bg-surface-container-low p-8 rounded-lg flex flex-col justify-between">
+<div>
+<h3 class="font-label-caps text-label-caps text-on-surface-variant mb-6 tracking-widest">Default Shipping Address</h3>
+<p class="font-body-lg text-body-lg text-primary mb-2">Home</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-1">123 Heritage Lane, Apt 4B</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-1">New York, NY 10012</p>
+<p class="font-body-md text-body-md text-on-surface-variant">United States</p>
+</div>
+<div class="mt-8">
+<button class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:text-on-surface-variant hover:border-on-surface-variant transition-colors">MANAGE ADDRESSES</button>
+</div>
+</div>
+</div>
+<!-- Recent Orders -->
+<div>
+<div class="flex justify-between items-end mb-6 border-b border-outline-variant/30 pb-4">
+<h2 class="font-headline-sm text-headline-sm text-primary">Recent Orders</h2>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">VIEW ALL</a>
+</div>
+<div class="space-y-6">
+<!-- Order Item -->
+<div class="flex flex-col md:flex-row items-center gap-6 py-6 border-b border-outline-variant/30">
+<div class="w-full md:w-32 aspect-[3/4] bg-surface-container-low shrink-0 relative overflow-hidden">
+<img class="w-full h-full object-cover absolute inset-0" data-alt="A luxurious, minimalist product shot of a high-end tailored wool coat in a muted taupe color, draped elegantly on a sculptural minimalist mannequin against a soft, bright white studio background. The lighting is high-key and diffused, highlighting the texture of the fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB183yF6Fbc4gdoApcJ_77Ze871-9fUISk3lhsJzp2KmMInpLx3JiU2qKMbesLEK95WmylIWGk0Z7YDJ_DG_A_YCRcKzNepzEqDJKlk4E8DjalnQEfDfKIQKKe3XtSVyslI_4LQZZxSoM5DhX47hYXCHAJHxFF2gZJ9LP_dzb4PwnoRpjtTWWqYPTeAJrcX5_86XvNYozkv-ZVJrWYZugyCNRESBFmCYIEWbIxlhqjWK5dk5qaxa7o"/>
+</div>
+<div class="flex-grow w-full">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">ORDER #ET-88231</p>
+<h4 class="font-body-lg text-body-lg text-primary">The Cashmere Wrap Coat</h4>
+</div>
+<p class="font-body-lg text-body-lg text-primary">$1,250</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Color: Camel | Size: 4</p>
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<p class="font-body-md text-body-md text-primary">Delivered on Oct 12, 2024</p>
+</div>
+</div>
+<div class="w-full md:w-auto mt-4 md:mt-0 flex justify-end">
+<button class="font-label-caps text-label-caps text-primary border border-outline px-6 py-3 hover:bg-primary hover:text-on-primary transition-colors duration-300">TRACK</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest w-full pt-section-gap pb-12 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 mb-8 md:mb-0">
+<p class="font-headline-md text-headline-md text-primary dark:text-on-primary-fixed mb-4">ETERNA</p>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 ETERNA. Timeless by Design.</p>
+</div>
+<div class="col-span-1 md:col-span-3 flex flex-wrap gap-8 md:justify-end">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Shop</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Customer Care</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Socials</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Store Locator</a>
+</div>
+</div>
+</footer>
+</body></html>

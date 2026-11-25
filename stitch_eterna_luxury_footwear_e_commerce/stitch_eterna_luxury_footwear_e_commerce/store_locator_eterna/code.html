@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ETERNA - Store Locator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#444748",
+                        "surface-container": "#efeeec",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#faf9f7",
+                        "outline": "#747878",
+                        "on-error-container": "#93000a",
+                        "background": "#faf9f7",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#25190f",
+                        "tertiary-container": "#25190f",
+                        "surface-container-highest": "#e3e2e0",
+                        "on-background": "#1a1c1b",
+                        "tertiary-fixed-dim": "#d8c3b3",
+                        "on-secondary-fixed-variant": "#574500",
+                        "inverse-on-surface": "#f1f1ef",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-tertiary-fixed-variant": "#534438",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-secondary-fixed": "#241a00",
+                        "secondary-fixed-dim": "#e9c349",
+                        "tertiary": "#000000",
+                        "on-secondary-container": "#745c00",
+                        "secondary": "#735c00",
+                        "outline-variant": "#c4c7c7",
+                        "surface-container-high": "#e9e8e6",
+                        "primary-fixed": "#e5e2e1",
+                        "surface-variant": "#e3e2e0",
+                        "surface": "#faf9f7",
+                        "secondary-fixed": "#ffe088",
+                        "on-surface": "#1a1c1b",
+                        "on-tertiary-container": "#938072",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#858383",
+                        "surface-container-low": "#f4f3f1",
+                        "primary": "#000000",
+                        "inverse-primary": "#c8c6c5",
+                        "tertiary-fixed": "#f5dece",
+                        "primary-container": "#1c1b1b",
+                        "surface-dim": "#dadad8",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2f3130",
+                        "secondary-container": "#fed65b",
+                        "surface-tint": "#5f5e5e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Bodoni Moda"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Bodoni Moda"],
+                        "label-caps": ["Inter"],
+                        "display-lg-mobile": ["Bodoni Moda"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "300" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-surface-dim selection:text-primary">
+<!-- TopNavBar -->
+<header class="bg-transparent sticky top-0 z-50 backdrop-blur-md dark:bg-transparent border-b border-outline-variant/30 dark:border-outline/20 w-full top-0 transition-all duration-500 ease-in-out">
+<div class="flex justify-between items-center px-margin-desktop py-6 w-full max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
+<!-- Mobile Menu Toggle (Left) -->
+<button class="md:hidden text-primary hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Navigation Links (Desktop Left) -->
+<nav class="hidden md:flex gap-8 items-center font-label-caps text-label-caps">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:opacity-70 transition-opacity duration-300" href="#">Shop</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:opacity-70 transition-opacity duration-300" href="#">Collections</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:opacity-70 transition-opacity duration-300" href="#">New Arrivals</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:opacity-70 transition-opacity duration-300" href="#">Best Sellers</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:opacity-70 transition-opacity duration-300" href="#">About</a>
+<a class="text-primary dark:text-on-primary-fixed border-b border-primary pb-1 hover:opacity-70 transition-opacity duration-300" href="#">Store Locator</a>
+</nav>
+<!-- Brand Logo (Center) -->
+<a class="font-display-lg text-display-lg tracking-widest text-primary dark:text-on-primary-fixed font-display-lg-mobile md:font-display-lg" href="#">
+                ETERNA
+            </a>
+<!-- Trailing Icons (Right) -->
+<div class="flex gap-4 items-center text-primary dark:text-on-primary-fixed">
+<button class="hover:opacity-70 transition-opacity duration-300"><span class="material-symbols-outlined">search</span></button>
+<button class="hover:opacity-70 transition-opacity duration-300 hidden md:block"><span class="material-symbols-outlined">person</span></button>
+<button class="hover:opacity-70 transition-opacity duration-300 hidden md:block"><span class="material-symbols-outlined">favorite</span></button>
+<button class="hover:opacity-70 transition-opacity duration-300"><span class="material-symbols-outlined">shopping_bag</span></button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col md:flex-row max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-section-gap gap-gutter">
+<!-- Left Panel: Search & List -->
+<section class="w-full md:w-5/12 flex flex-col gap-12 pr-0 md:pr-12">
+<!-- Header -->
+<div class="space-y-4">
+<h1 class="font-headline-md text-headline-md text-primary">Find a Boutique</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Discover ETERNA locations near you to experience our timeless collections in person.</p>
+</div>
+<!-- Search Form -->
+<div class="space-y-6">
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-4 font-body-md text-body-md text-primary placeholder:text-on-surface-variant/50 placeholder:italic transition-colors duration-300" placeholder="City, Area, or PIN code" type="text"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 text-primary hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+<button class="flex items-center gap-2 font-label-caps text-label-caps text-primary hover:opacity-70 transition-opacity duration-300 border-b border-primary pb-1 w-max">
+<span class="material-symbols-outlined text-[16px]">my_location</span>
+                    USE MY LOCATION
+                </button>
+</div>
+<!-- Store List -->
+<div class="flex flex-col gap-8 overflow-y-auto pr-4 custom-scrollbar" style="max-height: 600px;">
+<!-- Store Card 1 -->
+<div class="flex flex-col gap-4 pb-8 border-b border-outline-variant/30 group">
+<h2 class="font-headline-sm text-headline-sm text-primary">ETERNA Select Citywalk</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        G-12, Ground Floor, Select Citywalk Mall<br/>
+                        Saket, New Delhi 110017
+                    </p>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-1">
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">schedule</span> Mon - Sun: 11:00 AM - 9:00 PM</p>
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">call</span> +91 11 4123 5678</p>
+</div>
+<div class="flex gap-4 mt-2">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps py-4 px-10 hover:bg-surface-tint transition-colors duration-300">VIEW STORE</button>
+<button class="bg-transparent text-primary font-label-caps text-label-caps py-4 px-10 border border-primary hover:bg-surface-container-low transition-colors duration-300">DIRECTIONS</button>
+</div>
+</div>
+<!-- Store Card 2 -->
+<div class="flex flex-col gap-4 pb-8 border-b border-outline-variant/30 group">
+<h2 class="font-headline-sm text-headline-sm text-primary">ETERNA Palladium</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Level 1, Palladium Mall, High Street Phoenix<br/>
+                        Lower Parel, Mumbai 400013
+                    </p>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-1">
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">schedule</span> Mon - Sun: 11:00 AM - 10:00 PM</p>
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">call</span> +91 22 6655 4321</p>
+</div>
+<div class="flex gap-4 mt-2">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps py-4 px-10 hover:bg-surface-tint transition-colors duration-300">VIEW STORE</button>
+<button class="bg-transparent text-primary font-label-caps text-label-caps py-4 px-10 border border-primary hover:bg-surface-container-low transition-colors duration-300">DIRECTIONS</button>
+</div>
+</div>
+<!-- Store Card 3 -->
+<div class="flex flex-col gap-4 pb-8 border-b border-outline-variant/30 group">
+<h2 class="font-headline-sm text-headline-sm text-primary">ETERNA UB City</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        The Collection, UB City, Vittal Mallya Road<br/>
+                        Bengaluru 560001
+                    </p>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-1">
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">schedule</span> Mon - Sun: 10:30 AM - 8:30 PM</p>
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">call</span> +91 80 4111 2233</p>
+</div>
+<div class="flex gap-4 mt-2">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps py-4 px-10 hover:bg-surface-tint transition-colors duration-300">VIEW STORE</button>
+<button class="bg-transparent text-primary font-label-caps text-label-caps py-4 px-10 border border-primary hover:bg-surface-container-low transition-colors duration-300">DIRECTIONS</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Panel: Map -->
+<section class="w-full md:w-7/12 h-[500px] md:h-auto bg-surface-container-low relative overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full opacity-80 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" data-alt="A stylized, minimalist map graphic in a light-mode aesthetic, utilizing pale beige and warm grey tones with delicate champagne outline routes. The map represents a sophisticated urban area, perhaps a fashion district, rendered with extreme simplicity and generous negative space to evoke quiet luxury." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAR3Ib01_dXSScKOZlu9psMZZvfFuVSkggvFcSo1NUszQNvrnbpWi4F3Eb8Vvfe4yml3C8sTEW8-QLhvzlhv3Ld42ufQWcBe54V6DDTsLp-yUdUnG7rieHS0XpfWaPdWAGl29r539r_KNg4kWey7_eCSSLMrQwsCSGrFuqtu98kKd1xAiloci3hNRHqMgZrG3TsxyYAQUlYQNJHMURS6m6BegvLqBBzg6Mdvdr645tuM4XWbZI1c58')"></div>
+<!-- Floating Map Pin Example -->
+<div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-[32px] drop-shadow-md">location_on</span>
+<div class="bg-surface-container-lowest px-4 py-2 mt-2 shadow-sm">
+<p class="font-label-caps text-label-caps text-primary">ETERNA Select Citywalk</p>
+</div>
+</div>
+<!-- Map Overlay Graphic (Logo) -->
+<div class="absolute bottom-8 right-8 w-24 h-24 opacity-20 pointer-events-none">
+<img alt="ETERNA Brand Mark" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzIBiMh7_3nmTUltJIUwhKdcnd5ufuOn3Oafrm9YnbUZNBvQ-3dAPuQzAE3aLMRW3Pb4tAmFVYouPloB7dCeZtVrPKZe3uf_hS0IlJLUG2lPQk6gcpDhOeUSaEPZZs2w-mLMdBKymPwVCCla8VY7VNKjqK24cpszlou2-tufoFO5Kstf7n2U6jnsdPDL6mz90r8HZwSqQ3BfjF6I9naelEhMuiaY72mD8hJzAqVORP8xgaa84_gE0"/>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest w-full pt-section-gap pb-12 ease-in-out duration-200">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop px-margin-mobile max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="flex flex-col gap-4">
+<h3 class="font-headline-md text-headline-md text-primary dark:text-on-primary-fixed">ETERNA</h3>
+<p class="font-body-md text-body-md text-primary dark:text-on-primary-fixed">© 2024 ETERNA. Timeless by Design.</p>
+</div>
+<!-- Links -->
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all" href="#">Shop</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all" href="#">Customer Care</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all" href="#">Socials</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-primary dark:text-on-primary-fixed font-semibold hover:text-primary underline transition-all" href="#">Store Locator</a>
+</div>
+</div>
+</footer>
+<style>
+        /* Custom scrollbar for store list to keep UI clean */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: theme('colors.surface-container-low');
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: theme('colors.outline-variant');
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.outline');
+        }
+    </style>
+</body></html>

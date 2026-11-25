@@ -1,0 +1,14 @@
+{
+  "name": "eterna-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ETERNA Luxury Footwear - Full-Stack Workspace",
+  "scripts": {
+    "start:backend": "node backend/server.js",
+    "dev:backend": "node backend/server.js",
+    "dev:frontend": "cd frontend && node node_modules/vite/bin/vite.js",
+    "build:frontend": "cd frontend && node node_modules/vite/bin/vite.js build",
+    "test:backend": "cd backend && node test_api.js"
+  }
+}
+

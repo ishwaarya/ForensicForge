@@ -1,0 +1,37 @@
+# ETERNA Product Catalogue (Demo Data)
+
+## Stiletto Heels
+1. **Aurelia Stiletto** - Black patent leather. SKU: ET-ST-001. Price: ₹8,999. Heel: 100mm.
+2. **Celeste Pump** - Champagne satin. SKU: ET-ST-002. Price: ₹9,499. Heel: 85mm.
+3. **Noire Stiletto** - Black suede. SKU: ET-ST-003. Price: ₹9,999. Heel: 105mm.
+4. **Valentina Heel** - Burgundy velvet. SKU: ET-ST-004. Price: ₹11,999. Heel: 100mm.
+
+## Pumps & Slingbacks
+5. **Élan Slingback** - Ivory leather. SKU: ET-PS-005. Price: ₹7,999. Heel: 65mm.
+6. **Seraphine** - Nude suede. SKU: ET-PS-006. Price: ₹8,499. Heel: 75mm.
+7. **Isabella Pump** - Wine patent leather. SKU: ET-PS-007. Price: ₹8,799. Heel: 85mm.
+8. **Luna Slingback** - Silver metallic leather. SKU: ET-PS-008. Price: ₹9,299. Heel: 50mm.
+
+## Block & Platform Heels
+9. **Amara Block Heel** - Chocolate brown leather. SKU: ET-BP-009. Price: ₹6,999. Heel: 70mm.
+10. **Solenne Platform** - Metallic gold. SKU: ET-BP-010. Price: ₹13,499. Heel: 120mm.
+11. **Gaia Block** - Tan leather. SKU: ET-BP-011. Price: ₹7,499. Heel: 60mm.
+12. **Nova Platform** - Emerald velvet. SKU: ET-BP-012. Price: ₹12,499. Heel: 110mm.
+
+## Bridal & Party
+13. **Rosé Crystal Heel** - Rose gold embellished. SKU: ET-BP-013. Price: ₹12,999. Heel: 100mm.
+14. **Fleur Kitten Heel** - Blush pink satin. SKU: ET-BP-014. Price: ₹6,499. Heel: 45mm.
+15. **Aria Bridal Stiletto** - Ivory lace and silk. SKU: ET-BP-015. Price: ₹15,999. Heel: 90mm.
+16. **Selene Evening Pump** - Deep blue satin with crystal buckle. SKU: ET-BP-016. Price: ₹14,499. Heel: 85mm.
+
+## Mules & Strappy Heels
+17. **Lyra Mule** - Croc-effect black leather. SKU: ET-MS-017. Price: ₹7,299. Heel: 55mm.
+18. **Clara Strappy Heel** - Nude minimalist straps. SKU: ET-MS-018. Price: ₹8,199. Heel: 85mm.
+19. **Mira Slide** - Taupe suede. SKU: ET-MS-019. Price: ₹5,999. Heel: 35mm.
+20. **Vesper Strappy** - Black embossed leather. SKU: ET-MS-020. Price: ₹9,799. Heel: 100mm.
+
+## Wedges & Everyday
+21. **Sofia Wedge** - Tan leather and cork. SKU: ET-WE-021. Price: ₹6,299. Heel: 80mm.
+22. **Elena Block** - Grey suede. SKU: ET-WE-022. Price: ₹7,199. Heel: 50mm.
+23. **Cora Wedge** - Navy textured fabric. SKU: ET-WE-023. Price: ₹6,599. Heel: 75mm.
+24. **Zia Daily Heel** - Beige smooth leather. SKU: ET-WE-024. Price: ₹6,899. Heel: 65mm.

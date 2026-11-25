@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ETERNA - Timeless by Design</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#444748",
+                      "surface-container": "#efeeec",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#faf9f7",
+                      "outline": "#747878",
+                      "on-error-container": "#93000a",
+                      "background": "#faf9f7",
+                      "on-primary-fixed": "#1c1b1b",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#25190f",
+                      "tertiary-container": "#25190f",
+                      "surface-container-highest": "#e3e2e0",
+                      "on-background": "#1a1c1b",
+                      "tertiary-fixed-dim": "#d8c3b3",
+                      "on-secondary-fixed-variant": "#574500",
+                      "inverse-on-surface": "#f1f1ef",
+                      "on-primary-fixed-variant": "#474746",
+                      "on-tertiary-fixed-variant": "#534438",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "on-secondary-fixed": "#241a00",
+                      "secondary-fixed-dim": "#e9c349",
+                      "tertiary": "#000000",
+                      "on-secondary-container": "#745c00",
+                      "secondary": "#735c00",
+                      "outline-variant": "#c4c7c7",
+                      "surface-container-high": "#e9e8e6",
+                      "primary-fixed": "#e5e2e1",
+                      "surface-variant": "#e3e2e0",
+                      "surface": "#faf9f7",
+                      "secondary-fixed": "#ffe088",
+                      "on-surface": "#1a1c1b",
+                      "on-tertiary-container": "#938072",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "on-primary-container": "#858383",
+                      "surface-container-low": "#f4f3f1",
+                      "primary": "#000000",
+                      "inverse-primary": "#c8c6c5",
+                      "tertiary-fixed": "#f5dece",
+                      "primary-container": "#1c1b1b",
+                      "surface-dim": "#dadad8",
+                      "on-tertiary": "#ffffff",
+                      "inverse-surface": "#2f3130",
+                      "secondary-container": "#fed65b",
+                      "surface-tint": "#5f5e5e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "margin-desktop": "80px",
+                      "margin-mobile": "20px",
+                      "unit": "8px",
+                      "section-gap": "120px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Bodoni Moda"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Bodoni Moda"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Bodoni Moda"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .image-hover:hover img {
+            transform: scale(1.05);
+        }
+        .btn-primary {
+            @apply bg-primary text-on-primary font-label-caps text-label-caps px-10 py-4 hover:opacity-80 transition-opacity duration-300;
+        }
+        .btn-secondary {
+            @apply bg-transparent text-primary font-label-caps text-label-caps border-b border-primary pb-1 hover:opacity-70 transition-opacity duration-300;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden selection:bg-surface-dim selection:text-primary">
+<!-- TopNavBar -->
+<header class="bg-transparent sticky top-0 z-50 backdrop-blur-md dark:bg-transparent transition-all duration-500 ease-in-out border-b border-outline-variant/30 dark:border-outline/20 w-full" id="main-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 w-full max-w-container-max mx-auto">
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 hover:opacity-70" href="#">Shop</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 hover:opacity-70" href="#">Collections</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 hover:opacity-70" href="#">New Arrivals</a>
+</nav>
+<a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg tracking-widest text-primary dark:text-on-primary-fixed" href="#">
+<img alt="ETERNA Logo" class="h-8 md:h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzIBiMh7_3nmTUltJIUwhKdcnd5ufuOn3Oafrm9YnbUZNBvQ-3dAPuQzAE3aLMRW3Pb4tAmFVYouPloB7dCeZtVrPKZe3uf_hS0IlJLUG2lPQk6gcpDhOeUSaEPZZs2w-mLMdBKymPwVCCla8VY7VNKjqK24cpszlou2-tufoFO5Kstf7n2U6jnsdPDL6mz90r8HZwSqQ3BfjF6I9naelEhMuiaY72mD8hJzAqVORP8xgaa84_gE0"/>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 hover:opacity-70" href="#">Best Sellers</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 hover:opacity-70" href="#">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 hover:opacity-70" href="#">Store Locator</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-primary dark:text-on-primary-fixed hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="hidden md:block text-primary dark:text-on-primary-fixed hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="hidden md:block text-primary dark:text-on-primary-fixed hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="text-primary dark:text-on-primary-fixed hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center bg-no-repeat w-full h-full" data-alt="A stunning, high-fashion editorial close-up of luxurious stiletto heels in a minimalist, light-mode setting. Soft, diffuse natural lighting highlights the exquisite craftsmanship, fine leather textures, and elegant silhouette of the shoes. The background is a serene, warm ivory hue, creating a sophisticated and aspirational mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCm8eahqRF6AHonZwuiPUabEQP-Qbve1LLgP_dlASz-CEeCxMaRR2zHQr_hSyFDkwGzHPN8Je8tcqoA9Y8gtR4rJnMF27EnJmfTyWP13Cc25o-tSD1DqPrY8MRtrXB9yGvKkOs5eqVBcCFmE-iJjk_y-lM9RCgkQvcFLJhntsmpxGJ_3A4yIUujpIx0Wp5nJkmqof_-dTqR5p0wjvAv5plAYCzblprTfHBsSTGBpMFUx7z1fRqx-u0')"></div>
+<div class="absolute inset-0 bg-surface/20 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile max-w-4xl mx-auto flex flex-col items-center reveal-up">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 tracking-widest uppercase">ETERNA</h1>
+<p class="font-headline-sm text-headline-sm text-primary mb-6 italic">Timeless by Design.</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">Refined silhouettes designed to become part of your signature.</p>
+<div class="flex flex-col sm:flex-row items-center gap-6">
+<a class="btn-primary" href="#">Shop Heels</a>
+<a class="btn-secondary" href="#">Explore Collection</a>
+</div>
+</div>
+</section>
+<!-- Brand Statement -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-3xl mx-auto text-center reveal-up">
+<h2 class="font-headline-md text-headline-md text-primary mb-8 uppercase tracking-wide">ETERNA <br/><span class="italic font-light">Timeless by Design</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    We believe in the enduring power of quiet luxury. Every pair is meticulously crafted to balance timeless design with modern femininity. ETERNA is not just about footwear; it's about stepping into your own confidence with effortless grace.
+                </p>
+</div>
+</section>
+<!-- Featured Categories -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-md text-headline-md text-primary mb-12 text-center uppercase tracking-wider reveal-up">Curated Silhouettes</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-gutter max-w-container-max mx-auto">
+<!-- Category 1 -->
+<a class="group block relative overflow-hidden aspect-[3/4] image-hover reveal-up" href="#" style="transition-delay: 100ms;">
+<div class="bg-cover bg-center w-full h-full absolute inset-0 transition-transform duration-700 ease-out" data-alt="A minimalist editorial shot focusing on an elegant pair of Stiletto Heels. Light mode aesthetic, warm ivory background, soft lighting emphasizing the sharp, sophisticated heel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGYaSzfBRQ2u1X-v3Qcpi1nf7_e_RcQXluw3TMQ_EpDUzDtsl62xLVl-nBUeI4Z9BzNv6iyUW379sCI2KLaQ3MOkvTdIneMGZ8RSVW36plmFjL-bfBaXjQrkDf3a1tk9_rjMUYyKHZDlP0oaUCDzEkAjM141rsc352yOvXMEgPe8j5gdgsRShFIUB4xPcPuQAjL2BOtFghPhk0yQpkUC7l_zrNGKZyzgB49ZFlUSI3tdJhQwOj-yM')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="absolute bottom-6 left-6 right-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+<span class="font-label-caps text-label-caps text-on-primary border-b border-on-primary pb-1 inline-block">Stiletto Heels</span>
+</div>
+</a>
+<!-- Category 2 -->
+<a class="group block relative overflow-hidden aspect-[3/4] image-hover reveal-up" href="#" style="transition-delay: 200ms;">
+<div class="bg-cover bg-center w-full h-full absolute inset-0 transition-transform duration-700 ease-out" data-alt="A sophisticated lifestyle image featuring chic Block Heels. Light mode, pristine aesthetic, warm natural light highlighting the structural design of the heel against a subtle taupe setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2AUdkxBopspmiLYH-VS5FC4XIjdky8stHjLeOrbIHulx5weKjlGcn1grPhGwfbFi2zqh_bF3A9_0SH8Sr_q7w4oQFYpC_vZjPkklEb5_0-IcE2lAyIhqNfusFYemSPqJNvAjaZX41OolpM87z01nPuf2c1GQvTHVpLTZuB3rKwiClJiWNjjQdLkQNJ6DELVRDW3OvISvsFkiImhiBLClNU9wkr58XtAvqS3R8OBXw2948QMoDo40')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="absolute bottom-6 left-6 right-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+<span class="font-label-caps text-label-caps text-on-primary border-b border-on-primary pb-1 inline-block">Block Heels</span>
+</div>
+</a>
+<!-- Category 3 -->
+<a class="group block relative overflow-hidden aspect-[3/4] image-hover reveal-up" href="#" style="transition-delay: 300ms;">
+<div class="bg-cover bg-center w-full h-full absolute inset-0 transition-transform duration-700 ease-out" data-alt="An elegant, understated photograph of classic Kitten Heels. Soft, serene lighting in a light-mode environment. The focus is on the delicate curve of the low heel, radiating quiet luxury." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGlgB8J9BzrwvjNEyRmDieznDfgFxfHDEBBIKFyCIA-H0eibKkeqMOjp3irTiW1iZ8bdCeswLnYPzmUocvNunKoTluCRrkLncHH7pE23oJok6GiojYzKCJk27A4KNG09R9P5y00DhQrQsQO-sKoFfWdysAOnqqbIlrd2ZiQf6kPFZugWPmUZbCE3bf1BRLRIO81ygd2dWlT7oBbbt4sUcVTLDEnMfjnul04ivzYvRTM7MYT7OgJus')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="absolute bottom-6 left-6 right-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+<span class="font-label-caps text-label-caps text-on-primary border-b border-on-primary pb-1 inline-block">Kitten Heels</span>
+</div>
+</a>
+<!-- Category 4 -->
+<a class="group block relative overflow-hidden aspect-[3/4] image-hover reveal-up" href="#" style="transition-delay: 400ms;">
+<div class="bg-cover bg-center w-full h-full absolute inset-0 transition-transform duration-700 ease-out" data-alt="A striking editorial image showcasing bold Platform Heels. High-key white lighting, modern minimalist gallery vibe. The substantial silhouette of the platform is the hero, conveying contemporary edge." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-gF2dWvsk1oNwbxthZl12tp7JzJro9G9uHJp55ORtLRWSrFxDwgEv_mz60ybLA0ZH-TfjGatma376CFvQLjWZ8JUwmA_sRHvWUxMhzOBVCzRg4RiSMzRBi6_Eu9WE5mBXPEVQCk9zzMKjZfy8RSsF--lbpbrxyPIFI80PF1kHy_v8eER7r1KjZULVkQohPlK_aJ_f9MCln1S70ocyZWN3BTYV0QLXMMpcCT3Dp9PQbjjnmAll8iw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="absolute bottom-6 left-6 right-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+<span class="font-label-caps text-label-caps text-on-primary border-b border-on-primary pb-1 inline-block">Platform Heels</span>
+</div>
+</a>
+</div>
+<div class="mt-12 text-center reveal-up">
+<a class="btn-secondary" href="#">View All Silhouettes</a>
+</div>
+</section>
+<!-- New Arrivals -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal-up">
+<div class="max-w-xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-4 uppercase tracking-wide">New Arrivals</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Discover the latest expressions of ETERNA.</p>
+</div>
+<a class="btn-secondary hidden md:inline-block" href="#">Shop the Collection</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product 1 -->
+<div class="group flex flex-col reveal-up">
+<div class="relative aspect-[4/5] mb-4 bg-surface-container overflow-hidden">
+<img class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" data-alt="A high-fashion product shot of a sleek, black leather stiletto heel. Minimalist setting, soft natural light, conveying understated luxury and timeless elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh3M_qH3e2DAmeNxqWWs3Edcj4DqV-HYk6Oo90l9jnVSuf3g-AYu83pdiy0Vr5ZD2XrV7TpzyaqeVUJcO1Bc2fuO7v4bavk5WEcxyk-ZAB6hjoqNJZl3mg4jScU6NqQGftL1PDPGqJ9HWjS5-Omah44I2XURAxGEm6g-uz5SZedfczy8vrIubAMjNRF7EQ7f4_SCUybGt3qdo701STFHL1q3msVrmm1FtkwksWE5AzzFCP3969buw"/>
+<button class="absolute top-4 right-4 text-outline hover:text-primary transition-colors z-10 bg-surface/50 rounded-full p-2 backdrop-blur-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-10 flex justify-center">
+<button class="bg-primary/90 text-on-primary font-label-caps text-label-caps px-8 py-3 w-full hover:bg-primary transition-colors backdrop-blur-sm">Quick Add</button>
+</div>
+</div>
+<div class="flex flex-col items-center text-center">
+<h3 class="font-body-md text-body-md text-primary mb-1">The Classic Stiletto</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-2">Noir Leather</p>
+<p class="font-body-md text-body-md text-primary">₹12,500</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group flex flex-col reveal-up" style="transition-delay: 100ms;">
+<div class="relative aspect-[4/5] mb-4 bg-surface-container overflow-hidden">
+<img class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated product image of a delicate champagne-colored strappy heel. Light mode, editorial styling, capturing the delicate craftsmanship and feminine design against a pristine backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw-m78uECS15sClyVFTLGvWuNOr3VrrNcB-HpJgpxaTz67GLmtJhHoUcgxARjaHJsKk0qYacwQQExSLwI10h0x_n_vWXmlKhd4Ov1Wtnk2kbhi_yqMDUuZ8OuYtr4rwZWGYw2TeBIBtzZpPppHjypKC6v4dba1Eu4tXx9p7ja_fdF08AqB4tFGT66T-gws9MLEBZGtPSdA9xY3KXCAxlsPKv5i2VFHr7eM8aLyyp7s50U4NFNx_0E"/>
+<button class="absolute top-4 right-4 text-outline hover:text-primary transition-colors z-10 bg-surface/50 rounded-full p-2 backdrop-blur-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-10 flex justify-center">
+<button class="bg-primary/90 text-on-primary font-label-caps text-label-caps px-8 py-3 w-full hover:bg-primary transition-colors backdrop-blur-sm">Quick Add</button>
+</div>
+</div>
+<div class="flex flex-col items-center text-center">
+<h3 class="font-body-md text-body-md text-primary mb-1">The Evening Sandal</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-2">Champagne Satin</p>
+<p class="font-body-md text-body-md text-primary">₹14,200</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group flex flex-col reveal-up" style="transition-delay: 200ms;">
+<div class="relative aspect-[4/5] mb-4 bg-surface-container overflow-hidden">
+<img class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" data-alt="A minimal, luxurious shot of a structured nude block heel pump. Clean, warm white aesthetic, emphasizing the architectural shape and premium material of the shoe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrGG4AccZZvEb4kb6mVdKP-DxYfdfA4yd6TAs85KFEU7qOF86IxdVvdRaHxoHRwqPqSOcVHhKzqfcknqKTJMGB-WCNflc1KNQicuPmUosEtzEcyzZXzuB2qEMs2gR9ufmN3GpWpFzb8uAiHw_R9ozw0G18v4hx9IchfAE080uJ_MzblJ3PrMTnA4EC_r5I-RaMQMMOQdeTWydJL_6z2rt8vifTSBfbFjyI-gphsc8VTYMh4BbVYDs"/>
+<button class="absolute top-4 right-4 text-outline hover:text-primary transition-colors z-10 bg-surface/50 rounded-full p-2 backdrop-blur-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-10 flex justify-center">
+<button class="bg-primary/90 text-on-primary font-label-caps text-label-caps px-8 py-3 w-full hover:bg-primary transition-colors backdrop-blur-sm">Quick Add</button>
+</div>
+</div>
+<div class="flex flex-col items-center text-center">
+<h3 class="font-body-md text-body-md text-primary mb-1">The Architectural Pump</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-2">Nude Suede</p>
+<p class="font-body-md text-body-md text-primary">₹11,800</p>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center md:hidden reveal-up">
+<a class="btn-secondary" href="#">Shop the Collection</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest w-full pt-section-gap pb-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2 flex flex-col justify-between">
+<div>
+<span class="font-headline-md text-headline-md text-primary dark:text-on-primary-fixed block mb-6">ETERNA</span>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant max-w-sm mb-8">
+                         Timeless elegance crafted for the modern woman. Redefining luxury through minimalist design and uncompromising quality.
+                     </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant">© 2024 ETERNA. Timeless by Design.</p>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Shop</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Customer Care</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">About</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Socials</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Store Locator</a>
+</div>
+</div>
+</footer>
+<script>
+        // Reveal animations on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-up').forEach((element) => {
+            observer.observe(element);
+        });
+
+        // Sticky Nav logic (adds slight bg on scroll for better readability)
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-surface/90', 'shadow-sm');
+                nav.classList.remove('bg-transparent');
+            } else {
+                nav.classList.remove('bg-surface/90', 'shadow-sm');
+                nav.classList.add('bg-transparent');
+            }
+        });
+    </script>
+</body></html>

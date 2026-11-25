@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Collections | ETERNA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#444748",
+              "surface-container": "#efeeec",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "surface-bright": "#faf9f7",
+              "outline": "#747878",
+              "on-error-container": "#93000a",
+              "background": "#faf9f7",
+              "on-primary-fixed": "#1c1b1b",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#25190f",
+              "tertiary-container": "#25190f",
+              "surface-container-highest": "#e3e2e0",
+              "on-background": "#1a1c1b",
+              "tertiary-fixed-dim": "#d8c3b3",
+              "on-secondary-fixed-variant": "#574500",
+              "inverse-on-surface": "#f1f1ef",
+              "on-primary-fixed-variant": "#474746",
+              "on-tertiary-fixed-variant": "#534438",
+              "primary-fixed-dim": "#c8c6c5",
+              "on-secondary-fixed": "#241a00",
+              "secondary-fixed-dim": "#e9c349",
+              "tertiary": "#000000",
+              "on-secondary-container": "#745c00",
+              "secondary": "#735c00",
+              "outline-variant": "#c4c7c7",
+              "surface-container-high": "#e9e8e6",
+              "primary-fixed": "#e5e2e1",
+              "surface-variant": "#e3e2e0",
+              "surface": "#faf9f7",
+              "secondary-fixed": "#ffe088",
+              "on-surface": "#1a1c1b",
+              "on-tertiary-container": "#938072",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-primary-container": "#858383",
+              "surface-container-low": "#f4f3f1",
+              "primary": "#000000",
+              "inverse-primary": "#c8c6c5",
+              "tertiary-fixed": "#f5dece",
+              "primary-container": "#1c1b1b",
+              "surface-dim": "#dadad8",
+              "on-tertiary": "#ffffff",
+              "inverse-surface": "#2f3130",
+              "secondary-container": "#fed65b",
+              "surface-tint": "#5f5e5e"
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+            spacing: {
+              "gutter": "24px",
+              "container-max": "1440px",
+              "margin-desktop": "80px",
+              "margin-mobile": "20px",
+              "unit": "8px",
+              "section-gap": "120px"
+            },
+            fontFamily: {
+              "display-lg": ["Bodoni Moda"],
+              "body-lg": ["Inter"],
+              "headline-md": ["Bodoni Moda"],
+              "label-caps": ["Inter"],
+              "display-lg-mobile": ["Bodoni Moda"],
+              "body-md": ["Inter"],
+              "headline-sm": ["Bodoni Moda"]
+            },
+            fontSize: {
+              "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+              "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "300" }],
+              "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+              "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }],
+              "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+              "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+              "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .group:hover .group-hover\:scale-105 {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased font-body-lg">
+<!-- TopNavBar (Semantic Nav) -->
+<nav class="bg-surface/80 sticky top-0 z-50 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-500 ease-in-out w-full">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 w-full max-w-container-max mx-auto">
+<!-- Left Links (Desktop) -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Shop</a>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1" href="#">Collections</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">New Arrivals</a>
+</div>
+<!-- Brand Logo -->
+<a class="flex-shrink-0 flex items-center justify-center" href="/">
+<img alt="ETERNA Logo" class="h-8 md:h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzIBiMh7_3nmTUltJIUwhKdcnd5ufuOn3Oafrm9YnbUZNBvQ-3dAPuQzAE3aLMRW3Pb4tAmFVYouPloB7dCeZtVrPKZe3uf_hS0IlJLUG2lPQk6gcpDhOeUSaEPZZs2w-mLMdBKymPwVCCla8VY7VNKjqK24cpszlou2-tufoFO5Kstf7n2U6jnsdPDL6mz90r8HZwSqQ3BfjF6I9naelEhMuiaY72mD8hJzAqVORP8xgaa84_gE0"/>
+</a>
+<!-- Right Links & Actions -->
+<div class="flex items-center space-x-6">
+<div class="hidden md:flex space-x-8 mr-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Best Sellers</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Store Locator</a>
+</div>
+<!-- Icons -->
+<div class="flex space-x-4 text-primary">
+<button aria-label="Search" class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+<button aria-label="Account" class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+</button>
+<button aria-label="Favorites" class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+<button aria-label="Cart" class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="w-full h-[60vh] md:h-[80vh] relative flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full" data-alt="A striking editorial fashion photograph of a woman wearing high-end Eterna heels, striding confidently through a minimalist, sun-drenched architectural space with strong shadows. The color palette is warm ivory, champagne, and deep black. High contrast, cinematic lighting, sophisticated mood, emphasizing the luxury footwear." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxu4uRAl2djsWvGSI0eQUIFVzGIy1fCBqZxA2FnzjS4aVJjXNPwjTDD6XrC7WVSnD6Z5LVrPJugXBYtrF2rzNs4-G17rR1xOd9i1yfdd78l5-Z8JtCfErWYmX_GeIy1goua1f_GqaJwGyIVeLiNGLVViRH0XLHTlw-IMxRMeczgH5_1A5ZtLHOlkZzIrCsNoiEcID0aBuW8x3QG3tA1244ireJbyA59W8zNo0rzanO8FZ7fnGHGKg')"></div>
+<div class="absolute inset-0 bg-black/20"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6">Collections</h1>
+<p class="font-body-lg text-body-lg text-white/90 max-w-2xl mx-auto mb-10">Discover our curated edits, designed for every facet of the modern woman's life. Timeless silhouettes meet uncompromising luxury.</p>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap space-y-section-gap">
+<!-- Bento Grid Layout for Collections -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- The Evening Edit (Large Feature) -->
+<article class="md:col-span-12 group cursor-pointer relative overflow-hidden h-[500px] md:h-[700px] flex items-end">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105 z-0" data-alt="Close-up editorial shot of elegant, strappy black high heels with subtle crystal detailing, stepping out of a vintage luxury car onto wet cobblestones at night. Soft, cinematic city lights in the background. High-end fashion aesthetic, dramatic and sophisticated mood, deep black and silver tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7uLZ5nIU9cJhSlgy-RvwhfK8DXeNyTlT8m7r_uH7fj78fAuup_WAwpsFbl3ow2VuyUDBd9ZTPe-_v_eUus7GJYXdxYeJYKi9hnAR8Ubj7UnZnUbd9NJ-yYL1X9ZBQ32b8tfXUEXhW1LWYuT0qvVGIAW0_tuhXB1pp563iHX767l4dWAiJBS08vVhkmDeIuKb1QwVFL0jYPkRyJwmy-26XptmdPdd2wBpq2MSZvyz1Pd2RZVxf6ck')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+<div class="relative z-20 p-8 md:p-16 w-full md:w-1/2">
+<h2 class="font-headline-md text-headline-md text-white mb-4">The Evening Edit</h2>
+<p class="font-body-md text-body-md text-white/80 mb-8">Elegant heels crafted for the night's most memorable occasions. A masterclass in subtle drama.</p>
+<button class="font-label-caps text-label-caps text-white border-b border-white pb-1 hover:opacity-70 transition-opacity">Explore Edit</button>
+</div>
+</article>
+<!-- The Bridal Edit -->
+<article class="md:col-span-6 group cursor-pointer relative overflow-hidden h-[400px] md:h-[600px] flex flex-col justify-end">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105 z-0" data-alt="Delicate ivory silk pumps with a subtle champagne shimmer and tiny crystal embellishments, resting on a tufted velvet chaise lounge in a light-filled, classical room. Soft, diffused daylight, romantic and ethereal mood. Minimalist high-fashion bridal aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClzBd97uxRqFeLJPoO-RrlLO7KcaUoQrqBi4SaxnU4yCRNCI9GUm_zZTfjJorNyp0Nk77zUS73zYnuD9z1Vgf3DqA_G6nCjRk4pjXZBNbCyFJ9f7ux3nLT7Tq7orNWn5UewY1De88eExFH3YH7Tyec4RiW3sFnrKAuumvl4qGwMrHbQHpTj1N7jG6jbUDKJ80gloCGeezpkSH6Y-aaY-oGHH9kYOXwvrgZi3KLqDe6ln5nE3fHq44')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<div class="relative z-20 p-8">
+<h2 class="font-headline-sm text-headline-sm text-white mb-3">The Bridal Edit</h2>
+<p class="font-body-md text-body-md text-white/90 mb-6">Ivory, champagne, and crystal designs for the modern bride.</p>
+<span class="font-label-caps text-label-caps text-white/70 flex items-center">Discover <span class="material-symbols-outlined ml-2 text-[16px]" style="font-variation-settings: 'FILL' 0;">arrow_forward</span></span>
+</div>
+</article>
+<!-- The Signature Collection -->
+<article class="md:col-span-6 group cursor-pointer relative overflow-hidden h-[400px] md:h-[600px] flex flex-col justify-end bg-surface-container">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105 z-0" data-alt="A minimalist, highly stylized studio shot of iconic, classic black leather stiletto pumps resting on a stark, geometric white pedestal. Crisp, directional studio lighting casting sharp shadows. Very high fashion, stark, architectural aesthetic. Black and white palette with a warm undertone." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBi-FmEeh68NBCWbFguIL_ORgy3tHyTK6nRMCAVRAGDjxgjAo89PuPHFl_MuuxlX6HuFiAVUCaHXlGprEuUu2KEvNP7z8T9kpTrhOr_tAL2lzPwPycgtaPxkQlabHE309FLAZqX4pTSdxV-8J0IE3MalOmlYsfQk2Y-vzYwlcFDKvSLnTaH9C4VMs3DvvMP6EqUvZjzD5XQTocfdXIsfs4rsnzO3KnO6EU6D0GoWq6SMx_itKXkS3o')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<div class="relative z-20 p-8">
+<h2 class="font-headline-sm text-headline-sm text-white mb-3">The Signature Collection</h2>
+<p class="font-body-md text-body-md text-white/90 mb-6">The iconic silhouettes that define the ETERNA legacy.</p>
+<span class="font-label-caps text-label-caps text-white/70 flex items-center">Discover <span class="material-symbols-outlined ml-2 text-[16px]" style="font-variation-settings: 'FILL' 0;">arrow_forward</span></span>
+</div>
+</article>
+<!-- The Everyday Edit -->
+<article class="md:col-span-7 group cursor-pointer relative overflow-hidden h-[400px] md:h-[500px] flex flex-col justify-end">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105 z-0" data-alt="A lifestyle editorial shot of a woman's feet walking confidently on a sunlit city pavement wearing sophisticated, comfortable taupe leather mules. Warm afternoon sunlight, long shadows. Effortless chic, quiet luxury aesthetic. Soft neutral color palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2C1cw-Netr_qmrOqOOW_4k-M7zyaIW6txPg-SmZKSaanCtp0BClZpxZPvkYYcTbWCIODIjAvIJRm_AYTafPssp3NfAsfo3jTkG7aMWNs7dFVQfdHgIcC4wg_R_PqFiODmViME9rEVjcWTvrZkQSUaOahCIVR2jyNbW76486WqacMfj__J9iWloSrZsY3XWGbMerVFhbm9ZBb9u7v4-z019-GOlXqGI65DFUXhL_HgzYwrIqoX_X4')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<div class="relative z-20 p-8">
+<h2 class="font-headline-sm text-headline-sm text-white mb-3">The Everyday Edit</h2>
+<p class="font-body-md text-body-md text-white/90 mb-6">Comfortable yet sophisticated essentials for the daily rhythm.</p>
+<span class="font-label-caps text-label-caps text-white/70 flex items-center">Discover <span class="material-symbols-outlined ml-2 text-[16px]" style="font-variation-settings: 'FILL' 0;">arrow_forward</span></span>
+</div>
+</article>
+<!-- The Statement Collection -->
+<article class="md:col-span-5 group cursor-pointer relative overflow-hidden h-[400px] md:h-[500px] flex flex-col justify-end">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105 z-0" data-alt="A striking abstract editorial image focusing on the texture of a vibrant, deep crimson velvet pump with a bold sculptural heel. Set against a muted, dark taupe backdrop to emphasize the color. Dramatic lighting, rich textures, avant-garde high fashion mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDuqAWHO6iWFVQ44NjMwMAlbnGYWDMTsypBo3kK7SZjMlb-w1Vz-7JseoLxj4Mje9LRKPWBnb7gHqYTKcqlFBBTEQz7Ukgs3zLRKgdSxCOS2Wc35hiqU9NuolbAE7zci8HCm5leI3R2uCwv3sOx7y4bbROiGhg5XjA8AeqEbcMyOSPy5FXb1WFkZagRmymBKwK6MyLV7Ue910POvf1SQmtuV8J7TvRpynhOk6cbQ97eDmiPMwNH-JY')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<div class="relative z-20 p-8">
+<h2 class="font-headline-sm text-headline-sm text-white mb-3">The Statement Collection</h2>
+<p class="font-body-md text-body-md text-white/90 mb-6">Bold colors and distinctive textures for those who lead.</p>
+<span class="font-label-caps text-label-caps text-white/70 flex items-center">Discover <span class="material-symbols-outlined ml-2 text-[16px]" style="font-variation-settings: 'FILL' 0;">arrow_forward</span></span>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full pt-section-gap pb-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="col-span-1 md:col-span-2 mb-8 md:mb-0">
+<span class="font-headline-md text-headline-md text-primary mb-4 block">ETERNA</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Timeless by Design. Crafting luxurious footwear for the modern woman who appreciates quiet elegance.</p>
+</div>
+<!-- Links -->
+<div class="col-span-1">
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Shop</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Customer Care</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">About</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Socials</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Store Locator</a></li>
+</ul>
+</div>
+</div>
+<!-- Copyright -->
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-16 pt-8 border-t border-outline-variant/30">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 ETERNA. Timeless by Design.</p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ETERNA - Shop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#444748",
+                      "surface-container": "#efeeec",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#faf9f7",
+                      "outline": "#747878",
+                      "on-error-container": "#93000a",
+                      "background": "#faf9f7",
+                      "on-primary-fixed": "#1c1b1b",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#25190f",
+                      "tertiary-container": "#25190f",
+                      "surface-container-highest": "#e3e2e0",
+                      "on-background": "#1a1c1b",
+                      "tertiary-fixed-dim": "#d8c3b3",
+                      "on-secondary-fixed-variant": "#574500",
+                      "inverse-on-surface": "#f1f1ef",
+                      "on-primary-fixed-variant": "#474746",
+                      "on-tertiary-fixed-variant": "#534438",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "on-secondary-fixed": "#241a00",
+                      "secondary-fixed-dim": "#e9c349",
+                      "tertiary": "#000000",
+                      "on-secondary-container": "#745c00",
+                      "secondary": "#735c00",
+                      "outline-variant": "#c4c7c7",
+                      "surface-container-high": "#e9e8e6",
+                      "primary-fixed": "#e5e2e1",
+                      "surface-variant": "#e3e2e0",
+                      "surface": "#faf9f7",
+                      "secondary-fixed": "#ffe088",
+                      "on-surface": "#1a1c1b",
+                      "on-tertiary-container": "#938072",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "on-primary-container": "#858383",
+                      "surface-container-low": "#f4f3f1",
+                      "primary": "#000000",
+                      "inverse-primary": "#c8c6c5",
+                      "tertiary-fixed": "#f5dece",
+                      "primary-container": "#1c1b1b",
+                      "surface-dim": "#dadad8",
+                      "on-tertiary": "#ffffff",
+                      "inverse-surface": "#2f3130",
+                      "secondary-container": "#fed65b",
+                      "surface-tint": "#5f5e5e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "margin-desktop": "80px",
+                      "margin-mobile": "20px",
+                      "unit": "8px",
+                      "section-gap": "120px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Bodoni Moda"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Bodoni Moda"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Bodoni Moda"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom Checkbox */
+        .custom-checkbox {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 1px solid theme('colors.outline-variant');
+            background-color: transparent;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+        
+        .custom-checkbox:checked {
+            background-color: theme('colors.primary');
+            border-color: theme('colors.primary');
+        }
+        
+        .custom-checkbox:checked::after {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 1px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+      </style>
+</head>
+<body class="font-body-md text-body-md antialiased selection:bg-surface-dim selection:text-primary min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-transparent sticky top-0 z-50 backdrop-blur-md dark:bg-transparent w-full border-b border-outline-variant/30 dark:border-outline/20 transition-all duration-500 ease-in-out" id="navbar">
+<div class="flex justify-between items-center px-margin-desktop py-6 w-full max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
+<!-- Mobile Menu Button (Left) -->
+<button class="md:hidden text-primary dark:text-on-primary-fixed hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Brand Logo (Center Mobile, Left Desktop) -->
+<div class="flex-shrink-0 cursor-pointer">
+<img alt="ETERNA" class="h-8 md:h-10 object-contain hidden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzIBiMh7_3nmTUltJIUwhKdcnd5ufuOn3Oafrm9YnbUZNBvQ-3dAPuQzAE3aLMRW3Pb4tAmFVYouPloB7dCeZtVrPKZe3uf_hS0IlJLUG2lPQk6gcpDhOeUSaEPZZs2w-mLMdBKymPwVCCla8VY7VNKjqK24cpszlou2-tufoFO5Kstf7n2U6jnsdPDL6mz90r8HZwSqQ3BfjF6I9naelEhMuiaY72mD8hJzAqVORP8xgaa84_gE0"/>
+<span class="font-display-lg text-display-lg tracking-widest text-primary dark:text-on-primary-fixed font-headline-md text-headline-md md:font-display-lg md:text-display-lg uppercase">ETERNA</span>
+</div>
+<!-- Navigation Links (Center Desktop) -->
+<div class="hidden md:flex space-x-8">
+<a class="font-label-caps text-label-caps text-primary dark:text-on-primary-fixed border-b border-primary pb-1 uppercase tracking-[0.15em]" href="#">Shop</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase tracking-[0.15em]" href="#">Collections</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase tracking-[0.15em]" href="#">New Arrivals</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase tracking-[0.15em]" href="#">Best Sellers</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase tracking-[0.15em]" href="#">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 uppercase tracking-[0.15em]" href="#">Store Locator</a>
+</div>
+<!-- Trailing Icons (Right) -->
+<div class="flex items-center space-x-6">
+<button class="text-primary dark:text-on-primary-fixed hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined font-light">search</span>
+</button>
+<button class="text-primary dark:text-on-primary-fixed hover:opacity-70 transition-opacity duration-300 hidden md:block">
+<span class="material-symbols-outlined font-light">person</span>
+</button>
+<button class="text-primary dark:text-on-primary-fixed hover:opacity-70 transition-opacity duration-300 hidden md:block">
+<span class="material-symbols-outlined font-light">favorite</span>
+</button>
+<button class="text-primary dark:text-on-primary-fixed hover:opacity-70 transition-opacity duration-300 relative">
+<span class="material-symbols-outlined font-light">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-on-primary font-label-caps text-[9px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24 flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Filters (Desktop) -->
+<aside class="hidden md:block w-1/4 max-w-[280px] flex-shrink-0 pr-8 border-r border-outline-variant/30 sticky top-[100px] h-[calc(100vh-100px)] overflow-y-auto hide-scrollbar">
+<div class="mb-10">
+<h1 class="font-headline-md text-headline-md text-primary mb-2">Shop All</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Discover the complete collection of ETERNA timeless footwear.</p>
+</div>
+<!-- Filter Categories -->
+<div class="space-y-8">
+<!-- Category -->
+<div>
+<h3 class="font-label-caps text-label-caps text-primary mb-4 uppercase border-b border-outline-variant/30 pb-2">Category</h3>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li><label class="flex items-center space-x-3 cursor-pointer group"><input class="custom-checkbox" type="checkbox"/><span class="group-hover:text-primary transition-colors">Pumps</span></label></li>
+<li><label class="flex items-center space-x-3 cursor-pointer group"><input class="custom-checkbox" type="checkbox"/><span class="group-hover:text-primary transition-colors">Sandals</span></label></li>
+<li><label class="flex items-center space-x-3 cursor-pointer group"><input class="custom-checkbox" type="checkbox"/><span class="group-hover:text-primary transition-colors">Boots</span></label></li>
+<li><label class="flex items-center space-x-3 cursor-pointer group"><input class="custom-checkbox" type="checkbox"/><span class="group-hover:text-primary transition-colors">Flats</span></label></li>
+<li><label class="flex items-center space-x-3 cursor-pointer group"><input class="custom-checkbox" type="checkbox"/><span class="group-hover:text-primary transition-colors">Mules</span></label></li>
+</ul>
+</div>
+<!-- Size -->
+<div>
+<h3 class="font-label-caps text-label-caps text-primary mb-4 uppercase border-b border-outline-variant/30 pb-2">Size (EU)</h3>
+<div class="grid grid-cols-4 gap-2">
+<button class="border border-outline-variant text-center py-2 font-label-caps hover:border-primary hover:bg-surface-container-low transition-all">35</button>
+<button class="border border-outline-variant text-center py-2 font-label-caps hover:border-primary hover:bg-surface-container-low transition-all">36</button>
+<button class="border border-outline-variant text-center py-2 font-label-caps hover:border-primary hover:bg-surface-container-low transition-all">37</button>
+<button class="border border-outline-variant text-center py-2 font-label-caps hover:border-primary hover:bg-surface-container-low transition-all bg-primary text-on-primary">38</button>
+<button class="border border-outline-variant text-center py-2 font-label-caps hover:border-primary hover:bg-surface-container-low transition-all">39</button>
+<button class="border border-outline-variant text-center py-2 font-label-caps hover:border-primary hover:bg-surface-container-low transition-all">40</button>
+<button class="border border-outline-variant text-center py-2 font-label-caps hover:border-primary hover:bg-surface-container-low transition-all">41</button>
+<button class="border border-outline-variant text-center py-2 font-label-caps hover:border-primary hover:bg-surface-container-low transition-all">42</button>
+</div>
+</div>
+<!-- Color -->
+<div>
+<h3 class="font-label-caps text-label-caps text-primary mb-4 uppercase border-b border-outline-variant/30 pb-2">Colour</h3>
+<div class="flex flex-wrap gap-3">
+<button class="w-6 h-6 rounded-full bg-black border border-outline-variant ring-1 ring-offset-2 ring-primary"></button>
+<button class="w-6 h-6 rounded-full bg-white border border-outline-variant"></button>
+<button class="w-6 h-6 rounded-full bg-[#D2B48C] border border-outline-variant"></button>
+<button class="w-6 h-6 rounded-full bg-[#800020] border border-outline-variant"></button>
+<button class="w-6 h-6 rounded-full bg-[#000080] border border-outline-variant"></button>
+<button class="w-6 h-6 rounded-full bg-gradient-to-tr from-gray-300 to-gray-100 border border-outline-variant"></button>
+</div>
+</div>
+<!-- Price -->
+<div>
+<h3 class="font-label-caps text-label-caps text-primary mb-4 uppercase border-b border-outline-variant/30 pb-2">Price</h3>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li><label class="flex items-center space-x-3 cursor-pointer group"><input class="custom-checkbox" type="checkbox"/><span class="group-hover:text-primary transition-colors">Under ₹20,000</span></label></li>
+<li><label class="flex items-center space-x-3 cursor-pointer group"><input class="custom-checkbox" type="checkbox"/><span class="group-hover:text-primary transition-colors">₹20,000 - ₹50,000</span></label></li>
+<li><label class="flex items-center space-x-3 cursor-pointer group"><input class="custom-checkbox" type="checkbox"/><span class="group-hover:text-primary transition-colors">Over ₹50,000</span></label></li>
+</ul>
+</div>
+</div>
+</aside>
+<!-- Product Listing Area -->
+<section class="flex-grow flex flex-col w-full md:w-3/4">
+<!-- Top Controls (Mobile Search, Sorting) -->
+<div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+<!-- Mobile Filter Button & Title -->
+<div class="w-full md:hidden flex justify-between items-center">
+<h1 class="font-headline-sm text-headline-sm text-primary">Shop All</h1>
+<button class="flex items-center space-x-2 font-label-caps text-label-caps uppercase border border-outline-variant px-4 py-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-sm">tune</span>
+<span>Filters</span>
+</button>
+</div>
+<!-- Search Bar -->
+<div class="w-full md:w-auto flex-grow max-w-md relative">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-on-surface-variant ml-0">search</span>
+<input class="w-full bg-transparent border-b border-outline-variant pb-2 pl-8 text-body-md focus:outline-none focus:border-primary transition-colors placeholder:italic placeholder:text-on-surface-variant/70" placeholder="Search products..." type="text"/>
+</div>
+<!-- Sorting -->
+<div class="w-full md:w-auto flex justify-end items-center space-x-2">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase hidden md:inline-block">Sort By:</span>
+<select class="bg-transparent border-b border-outline-variant pb-2 text-body-md font-body-md focus:outline-none focus:border-primary cursor-pointer w-full md:w-auto appearance-none pr-8 relative">
+<option value="featured">Featured</option>
+<option value="newest">Newest</option>
+<option value="best-selling">Best Selling</option>
+<option value="price-low">Price (Low-High)</option>
+<option value="price-high">Price (High-Low)</option>
+</select>
+<!-- Custom dropdown arrow could go here, relying on native select for simplicity in this context but styled minimally -->
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-gutter gap-y-16 w-full">
+<!-- Product Card 1 -->
+<div class="group relative flex flex-col cursor-pointer">
+<!-- Image Area -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden mb-4">
+<img class="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105" data-alt="A high-fashion editorial style product photograph of a black velvet stiletto pump against a soft warm white background. The lighting is cinematic, casting subtle shadows that emphasize the luxurious texture of the velvet. Minimalist luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiJM0YunEmsGU6pbFqbL32CZ2hw_Uud5yRbu9TQQRQpPYkgLgsXRVCPXtfGxHbrf95h8fpeamzoUg2U7-GvgOyONQR7aneUtoR7_X7MYJAjiZc1MjZjBdCzLpaB0AwZyR5FArkpW9IsLUIlFdw3CIrpztPAv3CtLmSg5JmoVbMNJ9qJ2UlnvAbyLemEb6KQXeWL-fgZW9VX7T3dgKS6sYQGlGLhGmiHn712zA1OuPX9m-kgrhvSlY"/>
+<!-- Wishlist Overlay -->
+<button class="absolute top-4 right-4 z-10 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined font-light">favorite</span>
+</button>
+<!-- Quick Add Overlay (Hover) -->
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/20 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out flex justify-center opacity-0 group-hover:opacity-100">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps py-3 px-8 uppercase tracking-widest hover:bg-tertiary-container transition-colors w-full">Quick Add</button>
+</div>
+</div>
+<!-- Details -->
+<div class="flex flex-col text-center space-y-1">
+<h3 class="font-body-md text-body-md text-primary font-medium tracking-wide">The Obsidian Pump</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">₹ 45,000</p>
+<div class="flex justify-center items-center space-x-2 mt-2">
+<div class="w-3 h-3 rounded-full bg-black border border-outline-variant"></div>
+<div class="w-3 h-3 rounded-full bg-[#800020] border border-outline-variant opacity-50"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative flex flex-col cursor-pointer">
+<!-- Image Area -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden mb-4">
+<img class="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105" data-alt="A sophisticated flat lay photograph of a minimalist beige leather slide sandal resting on a textured ivory surface. Soft, diffused lighting creates a quiet luxury mood. High-end e-commerce style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM_HXx3sDsLvaN9mPukbwDelF4nSmzA3gkBJZPOkGoqanXbOlQJ6SgkdzEHCItKeKva4KDvGxWd4AU8yonum2U1wRA644qJ07eXJXLhaN0D6ltsE3Tyms-ZkkPNzXnk2u76Xr07sobIGIhO-SXu6oAqq1lcv1gbbCesdsaecCyricN7e4nGPVfCAxa-AR3BhhHo-qr_P5npFW5MoXBX2XSkB7PFjL2Lk1y3LdbIM13pmSjywX2OAI"/>
+<button class="absolute top-4 right-4 z-10 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined font-light">favorite</span>
+</button>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/20 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out flex justify-center opacity-0 group-hover:opacity-100">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps py-3 px-8 uppercase tracking-widest hover:bg-tertiary-container transition-colors w-full">Quick Add</button>
+</div>
+</div>
+<div class="flex flex-col text-center space-y-1">
+<h3 class="font-body-md text-body-md text-primary font-medium tracking-wide">Sahara Slide</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">₹ 28,500</p>
+<div class="flex justify-center items-center space-x-2 mt-2">
+<div class="w-3 h-3 rounded-full bg-[#D2B48C] border border-outline-variant"></div>
+<div class="w-3 h-3 rounded-full bg-white border border-outline-variant opacity-50"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative flex flex-col cursor-pointer">
+<!-- Image Area -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden mb-4">
+<img class="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105" data-alt="An elegant, low-angle shot of a sleek patent leather ankle boot in deep burgundy. The boot stands on a reflective champagne-colored surface. Dramatic, moody lighting highlights the glossy finish. Luxury editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2LE13hgV3BpMEEmAl5qgNgVWNyzABaoqtZ4m1VKgI4PYgy8PP3LU0Yd_6OEUbGMYCGyjhrSB40TU4k8BFapTWVtF22aoWL8013D4DEMD-QUzbxa-t6hkimf6Qja3e2cHglSpUGQYucZrUzz3R7gnwisd5Z5UaLVlwcsdq3q5ZZqqXNIvvC2IsqMP5y7GtcKgx5VAIvka3VZn-hYwF3n1V2ATAfV9F-fkMrRQp4q3BO45Nqxe5lZg"/>
+<button class="absolute top-4 right-4 z-10 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined font-light">favorite</span>
+</button>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/20 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out flex justify-center opacity-0 group-hover:opacity-100">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps py-3 px-8 uppercase tracking-widest hover:bg-tertiary-container transition-colors w-full">Quick Add</button>
+</div>
+</div>
+<div class="flex flex-col text-center space-y-1">
+<h3 class="font-body-md text-body-md text-primary font-medium tracking-wide">Bordeaux Boot</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">₹ 62,000</p>
+<div class="flex justify-center items-center space-x-2 mt-2">
+<div class="w-3 h-3 rounded-full bg-[#800020] border border-outline-variant"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative flex flex-col cursor-pointer">
+<!-- Image Area -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden mb-4">
+<img class="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105" data-alt="A clean, minimalist shot of a strappy metallic gold sandal against a stark white background. The lighting is bright and even, creating a light-mode aesthetic emphasizing the delicate straps and high heel. Professional product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2sGbRPBNr2NPC08vr3o_Ft_s9Pww91VQb5a3m97fzHAM1x3tSsLOPUTxJWcjMg0bbT_lnosjQLa8zd4cYY5kfaAPWl2vB8Dc9OD-LAR--cMVCZlujg0MihoRTR9TZAke-v4hf6HihRSVqm_yOqOIexORMZyjr4hys1eitukU5ak07aoRtNilApEfdfwT33kUH9qaZlcCFWO7sZdZPVKqItKLplQPvflfAWZ19Ek8jk74ET7EBUd8"/>
+<button class="absolute top-4 right-4 z-10 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined font-light">favorite</span>
+</button>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/20 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out flex justify-center opacity-0 group-hover:opacity-100">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps py-3 px-8 uppercase tracking-widest hover:bg-tertiary-container transition-colors w-full">Quick Add</button>
+</div>
+</div>
+<div class="flex flex-col text-center space-y-1">
+<h3 class="font-body-md text-body-md text-primary font-medium tracking-wide">Aura Stiletto</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">₹ 55,000</p>
+<div class="flex justify-center items-center space-x-2 mt-2">
+<div class="w-3 h-3 rounded-full bg-gradient-to-tr from-yellow-300 to-yellow-100 border border-outline-variant"></div>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group relative flex flex-col cursor-pointer">
+<!-- Image Area -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden mb-4">
+<img class="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105" data-alt="A beautifully styled image of a classic two-tone slingback flat (beige and black) resting on a piece of raw linen fabric. The overall tone is warm and inviting, representing understated luxury and comfort. Minimalist presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7gX9n4ihD_4uRMsAyWpt_j5Qw9PrmLhNSUEwlmU7OKkVn3BQBs-RGaEtDtRHfAXPOmZ1V-8zoMl461xkCG59pj_1Io4zcCGsUvYdrOHI4OPHyo4ecnwjjlTpI7qK6QPAdnq1UaKzeo0xoss_81wcuV_jEhXgLPPJedH8aRsyLN8bAXarX44EFciZVDXvD7_nPSu3W3SFWNdik6vyMxCFtGWM-UmqpaxMPLH82v9YspTDYS3KB4NM"/>
+<button class="absolute top-4 right-4 z-10 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined font-light">favorite</span>
+</button>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/20 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out flex justify-center opacity-0 group-hover:opacity-100">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps py-3 px-8 uppercase tracking-widest hover:bg-tertiary-container transition-colors w-full">Quick Add</button>
+</div>
+</div>
+<div class="flex flex-col text-center space-y-1">
+<h3 class="font-body-md text-body-md text-primary font-medium tracking-wide">Heritage Slingback</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">₹ 32,000</p>
+<div class="flex justify-center items-center space-x-2 mt-2">
+<div class="w-3 h-3 rounded-full bg-[#D2B48C] border border-outline-variant relative overflow-hidden"><div class="absolute top-0 right-0 w-1/2 h-full bg-black"></div></div>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group relative flex flex-col cursor-pointer">
+<!-- Image Area -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden mb-4">
+<img class="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-105" data-alt="An artistic profile shot of a sculptural white leather mule with a unique architectural heel. Placed against a soft gray, seamless background. The lighting is sharp, creating distinct geometric shadows that enhance the modern silhouette. High-fashion aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY5_o0MwMqy4HiyaB_wfIsqoWbvLypo_70fjNIxE6NOv4zydSLalpjkfTEjFbSW9V37-DdhT--lN_Q1QR_I1eFqqbw1mONulithnXVFf-iSB5FIJ-r9rE_phwBw-E1f7dXoflfX-lsOmiu-W2fcAgIxUtroIO0x8UnJIKHK-EG-0snhB2o0F88beOzXt5sPLGzvSXhQqP41FfsQGY4NBt8p8khfcBJJYjAcc5r_24R235b5Mbs59M"/>
+<button class="absolute top-4 right-4 z-10 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined font-light">favorite</span>
+</button>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/20 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out flex justify-center opacity-0 group-hover:opacity-100">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps py-3 px-8 uppercase tracking-widest hover:bg-tertiary-container transition-colors w-full">Quick Add</button>
+</div>
+</div>
+<div class="flex flex-col text-center space-y-1">
+<h3 class="font-body-md text-body-md text-primary font-medium tracking-wide">Sculpt Mule</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">₹ 48,000</p>
+<div class="flex justify-center items-center space-x-2 mt-2">
+<div class="w-3 h-3 rounded-full bg-white border border-outline-variant"></div>
+<div class="w-3 h-3 rounded-full bg-black border border-outline-variant opacity-50"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More -->
+<div class="mt-16 flex justify-center w-full">
+<button class="bg-transparent text-primary font-label-caps text-label-caps py-4 px-12 border-b border-primary hover:opacity-70 transition-opacity duration-300 uppercase tracking-widest">Load More</button>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest w-full pt-section-gap pb-12 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Brand Column -->
+<div class="flex flex-col space-y-6 md:col-span-1">
+<span class="font-headline-md text-headline-md text-primary dark:text-on-primary-fixed uppercase tracking-widest">ETERNA</span>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant max-w-xs">Timeless elegance, crafted for the modern journey.</p>
+</div>
+<!-- Links Columns -->
+<div class="flex flex-col space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary uppercase mb-2">Explore</h4>
+<a class="font-body-md text-body-md text-primary dark:text-on-primary-fixed font-semibold hover:text-primary underline transition-all ease-in-out duration-200" href="#">Shop</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Collections</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">New Arrivals</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary uppercase mb-2">Assistance</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Customer Care</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Store Locator</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Returns</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary uppercase mb-2">Company</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Socials</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all ease-in-out duration-200" href="#">Careers</a>
+</div>
+<!-- Copyright -->
+<div class="md:col-span-4 mt-12 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center text-sm">
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant mb-4 md:mb-0">© 2024 ETERNA. Timeless by Design.</p>
+<div class="flex space-x-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple script to change navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-transparent');
+                navbar.classList.add('bg-surface', 'shadow-sm');
+            } else {
+                navbar.classList.add('bg-transparent');
+                navbar.classList.remove('bg-surface', 'shadow-sm');
+            }
+        });
+    </script>
+</body></html>
